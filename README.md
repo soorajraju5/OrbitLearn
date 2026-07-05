@@ -1,94 +1,139 @@
-# orbitlearn
+````markdown
+# 🚀 OrbitLearn
 
-Simple ReAct agent
-Agent generated with `agents-cli` version `1.0.0`
+**OrbitLearn** is an AI-powered educational assistant built using **Google Agent Development Kit (ADK)**. It helps students learn topics through interactive conversations while demonstrating modern agent engineering concepts from Google's AI Agents course.
 
-## Project Structure
+## 🌟 Features
 
-```
-orbitlearn/
-├── app/         # Core agent code
-│   ├── agent.py               # Main agent logic
-│   ├── fast_api_app.py        # FastAPI Backend server
-│   └── app_utils/             # App utilities and helpers
-├── tests/                     # Unit, integration, and load tests
-├── GEMINI.md                  # AI-assisted development guide
-└── pyproject.toml             # Project dependencies
-```
-
-> 💡 **Tip:** Use [Antigravity CLI](https://antigravity.google/) for AI-assisted development - project context is pre-configured in `GEMINI.md`.
-
-## Requirements
-
-Before you begin, ensure you have:
-- **uv**: Python package manager (used for all dependency management in this project) - [Install](https://docs.astral.sh/uv/getting-started/installation/) ([add packages](https://docs.astral.sh/uv/concepts/dependencies/) with `uv add <package>`)
-- **agents-cli**: Agents CLI - Install with `uv tool install google-agents-cli`
-- **Google Cloud SDK**: For GCP services - [Install](https://cloud.google.com/sdk/docs/install)
-
-
-## Quick Start
-
-Install `agents-cli` and its skills if not already installed:
-
-```bash
-uvx google-agents-cli setup
-```
-
-Install required packages:
-
-```bash
-agents-cli install
-```
-
-Test the agent with a local web server:
-
-```bash
-agents-cli playground
-```
-
-You can also use features from the [ADK](https://adk.dev/) CLI with `uv run adk`.
-
-## Commands
-
-| Command              | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| `agents-cli install` | Install dependencies using uv                                                         |
-| `agents-cli playground` | Launch local development environment                                                  |
-| `agents-cli lint`    | Run code quality checks                                                               |
-| `agents-cli eval`    | Evaluate agent behavior (generate, grade, analyze, and more — see `agents-cli eval --help`) |
-| `uv run pytest tests/unit tests/integration` | Run unit and integration tests                                                        |
-| `agents-cli deploy`  | Deploy agent to Agent Runtime                                                                |
-| `agents-cli publish gemini-enterprise` | Register deployed agent to Gemini Enterprise                    || [A2A Inspector](https://github.com/a2aproject/a2a-inspector) | Launch A2A Protocol Inspector                                                        |
-
-## 🛠️ Project Management
-
-| Command | What It Does |
-|---------|--------------|
-| `agents-cli scaffold enhance` | Add CI/CD pipelines and Terraform infrastructure |
-| `agents-cli infra cicd` | One-command setup of entire CI/CD pipeline + infrastructure |
-| `agents-cli scaffold upgrade` | Auto-upgrade to latest version while preserving customizations |
+- 📚 Interactive educational AI assistant
+- 🤖 Built with Google ADK
+- 🔌 MCP (Model Context Protocol) server integration
+- ⚡ FastAPI backend
+- 🧠 ReAct-style reasoning workflow
+- 🔒 Secure project structure with environment-based configuration
+- 🧪 Evaluation and testing framework
+- 🚀 Ready for deployment
 
 ---
 
-## Development
+## 🛠️ Technology Stack
 
-Edit your agent logic in `app/agent.py` and test with `agents-cli playground` - it auto-reloads on save.
+- Python 3.12+
+- Google Agent Development Kit (ADK)
+- Google Agents CLI
+- FastAPI
+- MCP (Model Context Protocol)
+- Uvicorn
+- UV Package Manager
+- Git & GitHub
 
-## Deployment
+---
 
-```bash
-gcloud config set project <your-project-id>
-agents-cli deploy
+## 📁 Project Structure
+
+```
+orbitlearn/
+├── app/
+│   ├── agent.py
+│   ├── config.py
+│   ├── fast_api_app.py
+│   ├── mcp_server.py
+│   └── app_utils/
+├── deployment/
+├── tests/
+├── Dockerfile
+├── pyproject.toml
+├── agents-cli-manifest.yaml
+├── README.md
+└── uv.lock
 ```
 
-To add CI/CD and Terraform, run `agents-cli scaffold enhance`.
-To set up your production infrastructure, run `agents-cli infra cicd`.
+---
 
-## Observability
+## 🚀 Getting Started
 
-Built-in telemetry exports to Cloud Trace, BigQuery, and Cloud Logging.
+### Clone the repository
 
-## A2A Inspector
+```bash
+git clone https://github.com/soorajraju5/OrbitLearn.git
+cd OrbitLearn
+```
 
-This agent supports the [A2A Protocol](https://a2a-protocol.org/). Use the [A2A Inspector](https://github.com/a2aproject/a2a-inspector) to test interoperability.
-See the [A2A Inspector docs](https://github.com/a2aproject/a2a-inspector) for details.
+### Install dependencies
+
+```bash
+uv sync
+```
+
+### Configure environment
+
+Create a `.env` file and add the required API keys and configuration.
+
+### Run the application
+
+```bash
+uv run adk web
+```
+
+or
+
+```bash
+uv run python -m app.fast_api_app
+```
+
+---
+
+## 🧪 Evaluation
+
+The project includes evaluation and testing support.
+
+Run tests:
+
+```bash
+pytest
+```
+
+---
+
+## 📚 Course Concepts Demonstrated
+
+This project demonstrates multiple concepts from Google's AI Agents course, including:
+
+- ✅ Google Agent Development Kit (ADK)
+- ✅ MCP (Model Context Protocol) Server
+- ✅ Antigravity IDE development workflow
+- ✅ FastAPI agent deployment
+- ✅ Evaluation framework
+- ✅ Secure configuration using environment variables
+
+---
+
+## 🎯 Use Case
+
+OrbitLearn aims to make learning more engaging by providing an AI-powered educational assistant capable of answering questions, guiding students through concepts, and demonstrating modern agent engineering techniques.
+
+---
+
+## 📦 Deployment
+
+The project includes deployment-ready configuration using:
+
+- Docker
+- FastAPI
+- Terraform configuration
+- Google Cloud deployment templates
+
+---
+
+## 👨‍💻 Author
+
+**Sooraj Raju**
+
+GitHub: https://github.com/soorajraju5
+
+---
+
+## 📄 License
+
+This project was developed as part of the **Kaggle AI Agents: Intensive Vibe Coding Capstone Project**.
+````
