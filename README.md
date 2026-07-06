@@ -135,5 +135,9 @@ GitHub: https://github.com/soorajraju5
 
 ## 📄 License
 
-This project was developed as part of the **Kaggle AI Agents: Intensive Vibe Coding Capstone Project**.
+This project is licensed under the Apache License 2.0.
+
+See the LICENSE file for details.
+
+Copyright © 2026 Sooraj Raju (GitHub: soorajraju5)
 ````
